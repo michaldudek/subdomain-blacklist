@@ -3,6 +3,10 @@ Subdomain Blacklist (PHP)
 
 For full information on this project check the main [README.md](../README.md).
 
+[![Build Status](https://travis-ci.org/michaldudek/subdomain-blacklist.svg?branch=master)](https://travis-ci.org/michaldudek/subdomain-blacklist)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/55ab2d97-ebbc-46a9-844b-877ab991eafa/mini.png)](https://insight.sensiolabs.com/projects/55ab2d97-ebbc-46a9-844b-877ab991eafa)
+[![HHVM Status](http://hhvm.h4cc.de/badge/michaldudek/subdomain-blacklist.png)](http://hhvm.h4cc.de/package/michaldudek/subdomain-blacklist)
+
 # Installation
 
 You can install Subdomain Blacklist using [Composer](https://getcomposer.org).
