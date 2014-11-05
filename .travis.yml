@@ -8,6 +8,10 @@ php:
 
 before_script:
   - composer install
+  - cd php
+
+script:
+  - phpunit -c phpunit.xml
 
 notifications:
   email:
