@@ -7,10 +7,10 @@ List of common words that your users shouldn't use when setting up accounts.
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/55ab2d97-ebbc-46a9-844b-877ab991eafa/mini.png)](https://insight.sensiolabs.com/projects/55ab2d97-ebbc-46a9-844b-877ab991eafa)
 [![HHVM Status](http://hhvm.h4cc.de/badge/michaldudek/subdomain-blacklist.png)](http://hhvm.h4cc.de/package/michaldudek/subdomain-blacklist)
 
-When your app or service allows users to access their accounts using subdomains, e.g. `_michaldudek_.myapp.com`,
+When your app or service allows users to access their accounts using subdomains, e.g. `michaldudek.myapp.com`,
 it is useful to block some words so they don't take away a subdomain you'd want to use in the future
-or worse, try to trick your other users into believing they represent you (e.g. `_legal_.myapp.com` or
-`_support_.myapp.com).
+or worse, try to trick your other users into believing they represent you (e.g. `legal.myapp.com` or
+`support.myapp.com`).
 
 Apart from the blacklist, the goal of this repository is to provide code in various languages
 that validates a username against the list.
