@@ -119,25 +119,24 @@ class SubdomainBlacklistTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidate($string, $valid) {
         $subdomainBlacklist = new SubdomainBlacklist();
-        $this->assertEquals($valid, $subdomainBlacklist->validate($string), 'Failed asserting that a string has been properly validated.');
+        $this->assertEquals($valid, $subdomainBlacklist->validate($string),
+            'Failed asserting that a string has been properly validated.');
+
+        // check alternative versions
+        $this->assertEquals($valid, $subdomainBlacklist->validate(strtoupper($string)),
+            'Failed asserting that an uppercase string has been properly validated.');
+
+        $this->assertEquals($valid, $subdomainBlacklist->validate($string .'s'),
+            'Failed asserting that a plural string has been properly validated.');
+
+        $this->assertEquals($valid, $subdomainBlacklist->validate($string .'1'),
+            'Failed asserting that a string with digit suffix has been properly validated.');
     }
 
     public function provideStringsToTest() {
         // load the original blacklist to make sure everything has been added
         $path = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'blacklist.txt';
         $list = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-
-        // but also add some of our own, for a twist
-        $list = array_merge($list, array(
-            'adwords1',
-            'adult18',
-            'APIs',
-            'p0rns18',
-            'porn69',
-            'DashBoard',
-            'ads',
-            'css'
-        ));
 
         // so far everything is invalid
         $strings = array_map(function($string) {
