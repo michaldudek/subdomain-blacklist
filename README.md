@@ -53,6 +53,9 @@ that will return the blacklist.
 For more information about how to use this list in your specific language, please refer to `README.md` file
 in the language's folder.
 
+Currently supported:
+
+- php - [more info](php/README.md) - `$ composer require michaldudek/subdomain-blacklist dev-master`
 
 Planned:
 
