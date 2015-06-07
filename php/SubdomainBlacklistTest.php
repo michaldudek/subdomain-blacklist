@@ -143,6 +143,13 @@ class SubdomainBlacklistTest extends \PHPUnit_Framework_TestCase
             return array($string, false);
         }, $list);
 
+        // also test few that end with s
+        $strings[] = array('penis', false);
+        $strings[] = array('ass', false);
+        $strings[] = array('clitoris', false);
+        $strings[] = array('anus', false);
+        
+
         // but also add few valid strings
         $strings[] = array('frodo', true);
         $strings[] = array('Sam23', true);
